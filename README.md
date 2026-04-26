@@ -44,19 +44,19 @@ This application automatically:
 
 1. **Clone the repository**:
    ```bash
-       git clone https://gitlab.tunoo.de/root/tunoo-insurance-resource-downloader
-       cd tunoo-insurance-resource-downloader
+       git clone https://github.com/bm-vip/site-snap
+       cd site-snap
    ```
 
 2. **Build the Docker image**:
 
      ```bash
-        docker build -t tunoo-crawler .
+        docker build -t site-snap .
      ```
 3. **Run the container**:
 
      ```bash
-        docker run -it --rm tunoo-crawler
+        docker run -it --rm site-snap
      ```
 
 ## Manual Installation
@@ -83,10 +83,10 @@ Configure the application using these environment variables:
 | Variable           | Description                       | Default                     |
 |--------------------|-----------------------------------|-----------------------------|
 | `START_URLS`       | Comma-separated list of root URLs | `https://example.com,a.com`        |
-| `MINIO_ENDPOINT`   | MinIO server endpoint             | `obj-stage.tunoo.de`        |
+| `MINIO_ENDPOINT`   | MinIO server endpoint             | `localhost:9000`        |
 | `MINIO_ACCESS_KEY` | MinIO access key                  | `minioadmin`                |
-| `MINIO_SECRET_KEY` | MinIO secret key                  | `Vertra#2025@123@$`         |
-| `MINIO_BUCKET`     | Target bucket name                | `insurance-resources`   |
+| `MINIO_SECRET_KEY` | MinIO secret key                  | `minioadmin`         |
+| `MINIO_BUCKET`     | Target bucket name                | `site-snap`   |
 | `MINIO_SECURE`     | Use HTTPS connection              | `true`                      |
 
 ---
@@ -96,11 +96,11 @@ Configure the application using these environment variables:
 ```bash
    docker run -it --rm \
   -e START_URLS="https://www.nv-online.de,https://example.org" \
-  -e MINIO_ENDPOINT=obj-stage.tunoo.de \
+  -e MINIO_ENDPOINT=minio \
   -e MINIO_ACCESS_KEY=your-access-key \
   -e MINIO_SECRET_KEY=your-secret-key \
-  -e MINIO_BUCKET=insurance-resources \
-  tunoo-crawler
+  -e MINIO_BUCKET=site-snap \
+  ste-snap
  ```
 ### Project Structure
 
