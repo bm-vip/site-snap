@@ -1,6 +1,6 @@
 # Site Crawler & Downloader
 
-Tunoo Crawler & Downloader
+Crawls and fetches files, then stores them in MinIO
 
 An automated Python application that crawls websites, discovers downloadable PDF documents, downloads them, deduplicates them using SHA256 hashing, and uploads them to MinIO object storage — all with full resume capability for both crawling and downloading.
 
